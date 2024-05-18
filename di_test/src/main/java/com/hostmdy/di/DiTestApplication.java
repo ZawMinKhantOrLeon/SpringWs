@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.hostmdy.di.controller.GreetingController;
+import com.hostmdy.di.service.GreetingService;
+import com.hostmdy.di.service.imp.GreetingServiceImpl;
 
 @SpringBootApplication
 public class DiTestApplication {
@@ -12,8 +14,10 @@ public class DiTestApplication {
 	public static void main(String[] args) {
 		ApplicationContext context= SpringApplication.run(DiTestApplication.class, args);
 		
-//		GreetingController controller = (GreetingController) context.getBean("greetingController");
-		GreetingController controller = context.getBean(GreetingController.class);
+		
+		GreetingService greetingService = new GreetingServiceImpl();
+		GreetingController controller = new GreetingController(greetingService);
+		
 		System.out.println(controller.sayHello());
 	}
 
