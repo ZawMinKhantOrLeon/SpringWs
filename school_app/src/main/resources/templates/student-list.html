@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Major List</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Major Information Page</h1>
+       <div class="table-container">
+		    <a href="/student/create" class="btn btn-link">Create Student</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Fullname</th>
+                    <th> Year </th>
+                    <th> Major </th>
+                    <th> Action </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="student : ${students}">
+                    <td th:text="${student.id}">000</td>
+                    <td th:text="${student.firstname}">First Name</td>
+                    <td th:text="${student.lastname}">Last Name</td>
+                    <td th:text="${student.fullname}">Full Name</td>
+                    <td th:text="${student.year}">Year</td>
+                    <td th:text="${student.major.name}">Major</td>
+                    <td> 
+						<a th:href="@{'/student/'+ ${student.id} }" class=""> View</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Id</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Fullname</th>
+                    <th> Year </th>
+                    <th> Major </th>
+                    <th> Action </th>
+                </tr>
+            </tfoot>
+        </table>
+	   </div>
+    </div>
+</body>
+</html>

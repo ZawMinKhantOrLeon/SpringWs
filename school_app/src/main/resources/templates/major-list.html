@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Major List</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Major Information Table</h1>
+        
+    <div class="table-container">
+		<a class="btn btn-link" href="/major/create">Create Major</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="major : ${majors}">
+                    <td th:text="${ major.id }">000</td>
+                    <td th:text="${ major.name }">Sample Major</td>
+                    <td th:text="${ major.description }">This is sample description</td>
+                    <td>
+						<a th:href="@{'/major/'+${major.id}+'/update' }">Edit</a> | 
+						<a th:href="@{'/major/'+${major.id}+'/delete' }" style="color: red;">Delete</a> |
+						<a th:href="@{'/major/'+${major.id} }" style="color: yellow;">View</a>  
+					</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </tfoot>
+        </table>
+	</div>
+    </div>
+</body>
+</html>

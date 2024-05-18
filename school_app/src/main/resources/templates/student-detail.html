@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Major List</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title" th:text="${'Student ###' + (student.id) + ' ' +(student.fullname)}"></h1>
+        <h3 class="title" th:text="${'Major ID : ' + (student.major.id) }"></h3>
+        <h3 class="title" th:text="${'Major name : ' + (student.major.name) }"></h3>
+        <h3 class="title" th:text="${'Major Description : ' + (student.major.description) }"></h3>
+        
+        
+        <h1> Assign Teachers </h1>
+           <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>FullName</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="teacher : ${student.teachers}">
+                    <td th:text="${ teacher.id }"></td>
+                    <td th:text="${ teacher.firstname }"></td>
+                    <td th:text="${ teacher.lastname }"></td>
+                    <td th:text="${ teacher.fullname }"></td>
+                    <td th:text="${ teacher.email }"></td>
+                    <td th:text="${ teacher.role }"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>ID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>FullName</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+            </tfoot>
+        </table>
+        
+    </div>
+</body>
+</html>

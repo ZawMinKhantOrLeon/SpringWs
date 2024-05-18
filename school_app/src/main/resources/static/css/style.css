@@ -1,0 +1,96 @@
+.container{
+    margin: 2rem;
+
+}
+.title{
+    text-align: center;
+    color: purple;
+
+}
+
+table,th,td{
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+table{
+    width:100%;
+}
+
+th,td{
+    padding: 0.5rem;
+}
+
+thead{
+    background-color: purple ;
+    color: white;
+}
+
+tfoot{
+    background-color:black;
+    color: white;
+}
+
+
+tbody > tr:hover{
+    background-color: cyan;
+}
+
+.form-container{
+    width: 60%;
+    border: 1px solid grey;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 0.5rem auto;
+}
+
+.form-group > label{
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.form-group{
+    margin-bottom: 0.5 rem;
+}
+
+.form-group > input,textarea,select{
+    width: 100%;
+ 
+}
+
+input,select{
+    height: 2rem;
+}
+.actions{
+    width: 100%;
+}
+.btn{
+
+   
+    width: 4rem;
+    height: 2.5rem;
+    background-color: purple;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.table-container{
+    width: 60%;
+    margin: 0.5rem auto;
+}
+
+.btn-form{
+    padding: 0.5rem;
+    width: 4rem;
+    height: 2.5rem;
+}
+.btn-link{
+    padding-top: 0.6rem;
+    display: block;
+    text-align: center;
+    text-decoration: none ;
+    width: 8rem;
+    height: 2.5rem;
+}

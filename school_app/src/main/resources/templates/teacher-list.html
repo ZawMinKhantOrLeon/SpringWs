@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Major List</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Teacher Information Page</h1>
+       <div class="table-container">
+		    <a href="/teacher/create" class="btn btn-link">Create Teacher</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Fullname</th>
+                    <th> Role </th>
+                    <th> Action </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="teacher : ${teachers}">
+                    <td th:text="${teacher.id}">000</td>
+                    <td th:text="${teacher.firstname}">First Name</td>
+                    <td th:text="${teacher.lastname}">Last Name</td>
+                    <td th:text="${teacher.fullname}">Full Name</td>
+                    <td th:text="${teacher.role}">Year</td>
+                   
+                    <td> 
+						<a style="color: green;" th:href="@{'/teacher/'+ ${teacher.id} + '/assign' }" class=""> Assign</a>
+						<a style="color: blue;" th:href="@{'/teacher/'+ ${teacher.id} }" class=""> View</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Id</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Fullname</th>
+                    <th> Role </th>
+                    <th> Action </th>
+                </tr>
+            </tfoot>
+        </table>
+	   </div>
+    </div>
+</body>
+</html>
