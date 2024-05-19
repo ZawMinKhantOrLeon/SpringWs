@@ -14,15 +14,15 @@ public class DiTestApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context= SpringApplication.run(DiTestApplication.class, args);
-//		
-//		PropertyInjectionController controller = context.getBean(PropertyInjectionController.class);
-//		System.out.println(controller.sayHello());
 		
-//		SetterInjectionController controller = context.getBean(SetterInjectionController.class);
-//		System.out.println(controller.sayHello());
-		
-		ConstructorInjectionController controller = context.getBean(ConstructorInjectionController.class);
+		PropertyInjectionController controller = context.getBean(PropertyInjectionController.class);
 		System.out.println(controller.sayHello());
+		
+		SetterInjectionController controller1 = context.getBean(SetterInjectionController.class);
+		System.out.println(controller1.sayHello());
+		
+		ConstructorInjectionController controller2 = context.getBean(ConstructorInjectionController.class);
+		System.out.println(controller2.sayHello());
 	}
 
 }
