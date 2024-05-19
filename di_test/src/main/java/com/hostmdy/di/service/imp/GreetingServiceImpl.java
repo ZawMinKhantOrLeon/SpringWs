@@ -7,7 +7,7 @@ import com.hostmdy.di.service.GreetingService;
 @Service
 public class GreetingServiceImpl implements GreetingService {
 	
-	public static final  String GREET_WORD = "Hello";
+	public static final  String GREET_WORD = "Hello Stranger";
 	
 	@Override
 	public String greet() {
