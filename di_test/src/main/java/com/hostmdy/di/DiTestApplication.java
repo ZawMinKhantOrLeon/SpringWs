@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.hostmdy.di.controller.ConstructorInjectionController;
+import com.hostmdy.di.controller.PrimaryController;
 import com.hostmdy.di.controller.PropertyInjectionController;
 import com.hostmdy.di.controller.SetterInjectionController;
 
@@ -23,6 +24,9 @@ public class DiTestApplication {
 		
 		ConstructorInjectionController controller2 = context.getBean(ConstructorInjectionController.class);
 		System.out.println(controller2.sayHello());
+		
+		PrimaryController controller3 = context.getBean(PrimaryController.class);
+		System.out.println(controller3.sayHello());
 	}
 
 }
