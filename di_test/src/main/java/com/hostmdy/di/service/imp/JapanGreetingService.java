@@ -5,8 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.hostmdy.di.service.GreetingService;
 
-@Service("i18nGreetingService")
-@Profile({"JP","default"})
+
 public class JapanGreetingService implements GreetingService {
 
 	@Override

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import com.hostmdy.di.service.GreetingService;
 
 
-@Service
+
 public class SetterGreetingService implements GreetingService {
 
 	@Override
