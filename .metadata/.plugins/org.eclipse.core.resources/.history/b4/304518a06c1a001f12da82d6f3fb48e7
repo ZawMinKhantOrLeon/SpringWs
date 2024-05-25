@@ -1,0 +1,6 @@
+package com.hostmdy.di.service.imp;
+
+
+public class EnglishGreetingService implements Greeting{
+
+}

@@ -1,0 +1,37 @@
+package com.hostmdy.di.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import com.hostmdy.di.service.GreetingService;
+import com.hostmdy.di.repository.GreetingRepository;
+import com.hostmdy.di.service.imp.GreetingServiceFactory;
+
+@Configuration
+public class JavaBeanConfig {
+	
+	@Bean
+	GreetingServiceFactory greetingServiceFactory(GreetingRepository greetingRepository) {
+		return new GreetingServiceFactory(greetingRepository);
+		
+	}
+	
+	@Bean
+	GreetingService englishGreetingService(GreetingRepository greetingRepository) {
+		return new GreetingServiceFactory(greetingRepository).getGreetingService("en");
+	}
+	
+	@Bean
+	GreetingService SpanishGreetingService(GreetingRepository greetingRepository) {
+		return new GreetingServiceFactory(greetingRepository).getGreetingService("es");
+	}
+	
+	@Bean
+	GreetingService FrenchGreetingService(GreetingRepository greetingRepository) {
+		return new GreetingServiceFactory(greetingRepository).getGreetingService("fr");
+	}
+
+	@Bean
+	GreetingService GermanGreetingService(GreetingRepository greetingRepository) {
+		return new GreetingServiceFactory(greetingRepository).getGreetingService("gr");
+	}
+}
