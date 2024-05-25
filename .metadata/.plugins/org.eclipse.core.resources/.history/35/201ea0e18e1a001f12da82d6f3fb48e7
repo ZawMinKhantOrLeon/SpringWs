@@ -3,7 +3,7 @@ package com.hostmdy.di;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
+
 import com.hostmdy.di.controller.ConstructorInjectionController;
 import com.hostmdy.di.controller.I18nController;
 import com.hostmdy.di.controller.PrimaryController;
@@ -12,7 +12,6 @@ import com.hostmdy.di.controller.SetterInjectionController;
 
 
 @SpringBootApplication
-@ComponentScan({"com.hostmdy.service","com.hostmdy.di.controller","com.hostmdy.di.service.imp"})
 public class DiTestApplication {
 
 	public static void main(String[] args) {

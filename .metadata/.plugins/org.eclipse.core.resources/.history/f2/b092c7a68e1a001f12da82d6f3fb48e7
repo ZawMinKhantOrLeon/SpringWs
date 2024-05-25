@@ -3,14 +3,16 @@ package com.hostmdy.di.controller;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-import com.hostmdy.service.GreetingService;
+import com.hostmdy.di.service.GreetingService;
 
 @Controller
-public class I18nController {
+public class ConstructorInjectionController {
 	
-	private final GreetingService greetingService;
+	
+	private final GreetingService greetingService ;
 
-	public I18nController(@Qualifier("i18nGreetingService") GreetingService greetingService) {
+	
+	public ConstructorInjectionController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
 		super();
 		this.greetingService = greetingService;
 	}
@@ -18,6 +20,5 @@ public class I18nController {
 	public String sayHello() {
 		return greetingService.greet();
 	}
-	
 	
 }

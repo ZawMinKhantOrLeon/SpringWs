@@ -2,7 +2,7 @@ package com.hostmdy.di.controller;
 
 import org.springframework.stereotype.Controller;
 
-import com.hostmdy.service.GreetingService;
+import com.hostmdy.di.service.GreetingService;
 
 @Controller
 public class PrimaryController {

@@ -3,7 +3,7 @@ package com.hostmdy.di.service.imp;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import com.hostmdy.di.service.GreetingService;
+import com.hostmdy.service.GreetingService;
 
 @Service("i18nGreetingService")
 @Profile({"JP","default"})

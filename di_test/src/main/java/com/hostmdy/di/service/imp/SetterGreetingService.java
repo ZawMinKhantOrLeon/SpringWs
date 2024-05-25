@@ -2,7 +2,7 @@ package com.hostmdy.di.service.imp;
 
 import org.springframework.stereotype.Service;
 
-import com.hostmdy.di.service.GreetingService;
+import com.hostmdy.service.GreetingService;
 
 
 @Service

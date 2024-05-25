@@ -3,7 +3,7 @@ package com.hostmdy.di.service.imp;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import com.hostmdy.service.GreetingService;
+import com.hostmdy.di.service.GreetingService;
 
 @Service
 @Primary
