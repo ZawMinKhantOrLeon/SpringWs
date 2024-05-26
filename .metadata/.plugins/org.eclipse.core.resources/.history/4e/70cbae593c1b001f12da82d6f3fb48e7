@@ -14,11 +14,11 @@ import com.hostmdy.di.datasource.FakeDataSource;
 public class PropertiesConfig {
 	
 	@Autowired
-	Environment env;
-	@Value("${mysql.name}")
-	String username;
-	@Value("${mysql.password}")
-	String password;
+//	Environment env;
+//	@Value("${mysql.name}")
+//	String username;
+//	@Value("${mysql.password}")
+//	String password;
 	@Value("${mysql.url}")
 	String url;
 	@Value("${mysql.engine}")
