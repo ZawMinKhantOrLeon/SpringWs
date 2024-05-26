@@ -33,7 +33,7 @@ public class PropertiesConfig {
 	
 	@Bean
 	FakeDataSource fakeDataSource() {
-		return new FakeDataSource(env.getProperty("username"),env.getProperty("password"),url,engine);
+		return new FakeDataSource(username,password,url,engine);
 	}
 	
 	@Bean
