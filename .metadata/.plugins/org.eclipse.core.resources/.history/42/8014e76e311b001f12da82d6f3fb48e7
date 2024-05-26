@@ -1,0 +1,32 @@
+package com.hostmdy.di.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import com.hostmdy.di.datasource.FakeDataSource;
+
+@Configuration
+@PropertySource({"mysql_config.properties","oracle_config.properties"})
+public class PropertiesConfig {
+	
+	@Value("${mysql.name}")
+	String username;
+	@Value("${mysql.password}")
+	String password;
+	@Value("${mysql.url}")
+	String url;
+	@Value("${mysql.engine}")
+	String engine;
+	
+	@Bean
+	FakeDataSource fakeDataSource() {
+		return new FakeDataSource(username,password,url,engine);
+	}
+	@Bean
+	static PropertySourcesPlaceholderConfigurer propertySource() {
+		return new PropertySourcesPlaceholderConfigurer();
+	}
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;di_test/src/main/resources/mysql.config.properties&apos; to &apos;mysql_config.properties&apos;" description="Rename resource &apos;mysql.config.properties&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/mysql.config.properties" name="mysql_config.properties" stamp="1716640391247" updateReferences="true"/>
+</session>
