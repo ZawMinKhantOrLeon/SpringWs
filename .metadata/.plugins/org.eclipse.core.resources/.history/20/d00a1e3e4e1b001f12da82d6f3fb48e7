@@ -1,9 +1,6 @@
 spring.application.name=di_test
 spring.profiles.active=prod
 
-
-#---
-spring.config.activate.on-profile=dev
 #mysql
 
 mysql.name=root
@@ -19,8 +16,7 @@ cloud.auth =admin
 cloud.address =192.168.
 
 
-#---
-spring.config.activate.on-profile=prod
+
 #mysql
 
 mysql.name=admin
