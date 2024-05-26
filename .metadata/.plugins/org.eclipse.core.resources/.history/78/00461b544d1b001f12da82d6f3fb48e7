@@ -1,2 +1,2 @@
 spring.application.name=di_test
-spring.profiles.active=prod
+spring.profiles.active=dev
